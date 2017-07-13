@@ -39,7 +39,7 @@ In code cell 2 of the Ipython notebook , I loaded the provided `vehicle` and `no
 
 In code cell 4-5, I explored various color spaces of a randomly selected car and non car image using `explore_colorspaces_HOG` function and computed the HOG of each colorspace using `skimage.hog()` function with  different `skimage.hog()` parameters (`orientations`, `pixels_per_cell`, and `cells_per_block`). I displayed the images to get a feel for what the `skimage.hog()` output looks like.
 
-Here is an example using the `YCrCb` color space and HOG parameters of `orientations=8`, `pixels_per_cell=(8, 8)` and `cells_per_block=(2, 2)`:
+Here is an example using the `YCrCb` color space and the following HOG parameters `orientations=8`, `pixels_per_cell=(8, 8)` and `cells_per_block=(2, 2)`:
 
 ![alt text][image2a]
 ![alt text][image2b]
