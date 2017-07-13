@@ -92,7 +92,7 @@ spatial_size = (32,32)
 hist_bins = 32
 ```
 
-I also implemented a `add_heat` function to generate a heat map of detected vehicles in code cell 17. The following shows test images and corresponding detections using sliding windows and heatmaps:
+In code cell 17, I also implemented a `add_heat` function to generate a heat map of detected vehicles. The following shows test images and corresponding detections using sliding windows and heatmaps:
 
 ![alt text][image4a]
 ![alt text][image4b]
@@ -108,32 +108,19 @@ The implemented sliding window search method `find_cars`, generally performs wel
 
 ####1. Provide a link to your final video output.  Your pipeline should perform reasonably well on the entire project video (somewhat wobbly or unstable bounding boxes are ok as long as you are identifying the vehicles most of the time with minimal false positives.)
 
+In  code cell 20, I implemented a pipeline `process_image` function which takes an image and ouputs an image with a bounding box(es) highlighting detected vehicle(s).
+Below is a link to a video with each of its frame passed throught the pipeline:
+
 ![alt text][image5]
 
 Here's a [link to the processed video][video]
 
+**Discussion**
 
-####2. Describe how (and identify where in your code) you implemented some kind of filter for false positives and some method for combining overlapping bounding boxes.
-
-I recorded the positions of positive detections in each frame of the video.  From the positive detections I created a heatmap and then thresholded that map to identify vehicle positions.  I then used `scipy.ndimage.measurements.label()` to identify individual blobs in the heatmap.  I then assumed each blob corresponded to a vehicle.  I constructed bounding boxes to cover the area of each blob detected.  
-
-Here's an example result showing the heatmap from a series of frames of video, the result of `scipy.ndimage.measurements.label()` and the bounding boxes then overlaid on the last frame of video:
-
-### Here are six frames and their corresponding heatmaps:
-
-![alt text][image5]
-
-### Here is the output of `scipy.ndimage.measurements.label()` on the integrated heatmap from all six frames:
-![alt text][image6]
-
-### Here the resulting bounding boxes are drawn onto the last frame in the series:
-![alt text][image7]
+There were some challenges encountered while implementing the pipeline. Vehicles were not detected all the time and there where several false positives. To improve the performance of the pipeline, I averaged every five frames of the video and set a threshould to remove less frequent bounding box(es).This outputs a more consistent bounding box for detected vehicles.To remove false positives I excluded bounding boxes with width or height less than 50m. 
 
 
 
----
-
-###Discussion
 
 ####1. Briefly discuss any problems / issues you faced in your implementation of this project.  Where will your pipeline likely fail?  What could you do to make it more robust?
 
