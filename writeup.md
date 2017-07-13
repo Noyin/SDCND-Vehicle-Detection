@@ -18,7 +18,7 @@ The goals / steps of this project are the following:
 [image2b]: ./output_images/HOG_example_2.jpg
 [image2c]: ./output_images/HOG_example_3.jpg
 [image2d]: ./output_images/HOG_example_4.jpg
-[image3]: ./colorspace exploration/HSV_3D_plot.png
+[image3]: ./colorspace_exploration/HSV_3D_plot.png
 [image4]: ./output_images/sliding_window.jpg
 [image5]: ./output_images/bboxes_and_heat.png
 [image6]: ./output_images/labels_map.png
@@ -50,7 +50,7 @@ I tried various combinations of parameters and selected the following combinatio
 
 From code cell 6 - 12, I explored various color histograms of colorspaces to determine which properly clusters car pixels.The Saruration plane in the SHSV color sapce does a good good.Here is a 3-D plot of an image show the clustering of car pixels in the saturation plane:
 
-![alt text][image3]:
+![alt text][image3]
 
 
 
