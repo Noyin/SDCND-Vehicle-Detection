@@ -18,7 +18,7 @@ The goals / steps of this project are the following:
 [image2b]: ./output_images/HOG_example_2.jpg
 [image2c]: ./output_images/HOG_example_3.jpg
 [image2d]: ./output_images/HOG_example_4.jpg
-[image3]: ./output_images/sliding_windows.jpg
+[image3]: ./colorspace exploration/HSV_3D_plot.png
 [image4]: ./output_images/sliding_window.jpg
 [image5]: ./output_images/bboxes_and_heat.png
 [image6]: ./output_images/labels_map.png
@@ -35,7 +35,7 @@ In code cell 2 of the Ipython notebook , I read in the provided the `vehicle` an
 
 ![alt text][image1]
 
-I explored various color spaces of a randomly selected car and non car image and computed the HOG of each colorspace using `skimage.hog()` function with  different `skimage.hog()` parameters (`orientations`, `pixels_per_cell`, and `cells_per_block`). I displayed the images to get a feel for what the `skimage.hog()` output looks like.
+In code cell 5, I explored various color spaces of a randomly selected car and non car image using `explore_colorspaces_HOG` function and computed the HOG of each colorspace using `skimage.hog()` function with  different `skimage.hog()` parameters (`orientations`, `pixels_per_cell`, and `cells_per_block`). I displayed the images to get a feel for what the `skimage.hog()` output looks like.
 
 Here is an example using the `YCrCb` color space and HOG parameters of `orientations=8`, `pixels_per_cell=(8, 8)` and `cells_per_block=(2, 2)`:
 
@@ -46,7 +46,13 @@ Here is an example using the `YCrCb` color space and HOG parameters of `orientat
 
 I tried various combinations of parameters and selected the following combination `orientations=8`, `pixels_per_cell=(8, 8)` and `cells_per_block=(2, 2)`. This combination properly captured unique features of vehicles in images. 
 
-**color features**
+**Color Histograms**
+
+From code cell 6 - 12, I explored various color histograms of colorspaces to determine which properly clusters car pixels.The Saruration plane in the SHSV color sapce does a good good.Here is a 3-D plot of an image show the clustering of car pixels in the saturation plane:
+
+![alt text][image3]:
+
+
 
 
 **Train Classifier**
