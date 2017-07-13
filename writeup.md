@@ -92,7 +92,7 @@ spatial_size = (32,32)
 hist_bins = 32
 ```
 
-In code cell 17, I also implemented a `add_heat` function to generate a heat map of detected vehicles. The following shows test images and corresponding detections using sliding windows and heatmaps:
+In code cell 17, I also implemented a `add_heat` function to generate a heat map of detected vehicles. The following shows bounding boxes on detected veicles  for test images using sliding window and their corresponding heatmaps:
 
 ![alt text][image4a]
 ![alt text][image4b]
@@ -105,8 +105,6 @@ The implemented sliding window search method `find_cars`, generally performs wel
 
 
 **Video Implementation**
-
-####1. Provide a link to your final video output.  Your pipeline should perform reasonably well on the entire project video (somewhat wobbly or unstable bounding boxes are ok as long as you are identifying the vehicles most of the time with minimal false positives.)
 
 In  code cell 20, I implemented a pipeline `process_image` function which takes an image and ouputs an image with a bounding box(es) highlighting detected vehicle(s).
 Below is a link to a video with each of its frame passed throught the pipeline:
