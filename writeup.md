@@ -104,7 +104,7 @@ I also implemented a `add_heat` function to generate a heat map of detected vehi
 ![alt text][image4e]
 ![alt text][image4f]
 
-*Note the sliding window properly detects close by vehicles.
+*Note the implemented sliding window search method `find_cars`, properly detects vehicles that appear closer in the image.
 
 
 **Video Implementation**
