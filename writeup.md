@@ -97,9 +97,13 @@ hist_bins = 32
 
 I also implemented a `add_heat` function to generate a heat map of detected vehicles in code cell 17. The following shows test images and corresponding detections using sliding windows and heatmaps:
 
+![alt text][image4a]
+![alt text][image4b]
+![alt text][image4c]
+![alt text][image4d]
+![alt text][image4e]
+![alt text][image4f]
 
-
-![alt text][image3]
 
 **Video Implementation**
 
