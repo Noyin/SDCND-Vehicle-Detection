@@ -113,7 +113,7 @@ Here's a [link to the processed video][video]
 
 **Discussion**
 
-There were some challenges encountered while implementing the pipeline. Vehicles were not detected all the time and there where several false positives. To improve the performance of the pipeline, I averaged every five frames of the video and set a threshold (using `apply_threshold` function) to remove regions with low heat intensity.This outputs a more consistent bounding box for detected vehicles.To remove false positives, I excluded bounding boxes with width or height less than 50m. 
+There were some challenges encountered while implementing the pipeline. Vehicles were not detected all the time and there where several false positives. To improve the performance of the pipeline, I averaged every five frames of the video and set a threshold (using `apply_threshold` function) to remove regions with low heat intensity.This outputs a more consistent bounding box for detected vehicles.To filter out false positives, I excluded bounding boxes with width or height less than 50m. 
 
 The pipeline performed generally well in detecting vehicles but the trained classifier sometimes identifies dark spots as vehicles thus creating false positives. To tackle this problem, I would train a better classifier either by improving the quality of the dataset , get more dataset , use an ensemble of classifiers or explore additional colorspaces.
 
