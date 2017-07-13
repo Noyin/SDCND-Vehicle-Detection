@@ -33,7 +33,7 @@ The code for the following steps are contained in the IPython notebook located i
 
 **Histogram of Oriented Gradients (HOG)**
 
-In code cell 2 of the Ipython notebook , I loaded the provided the `vehicle` and `non-vehicle` images into cars and not_cars arrays respectively.  Here is an example of one of each of the `vehicle` and `non-vehicle` classes:
+In code cell 2 of the Ipython notebook , I loaded the provided `vehicle` and `non-vehicle` images into cars and not_cars arrays respectively.  Here is an example of one of each of the `vehicle` and `non-vehicle` classes:
 
 ![alt text][image1]
 
@@ -81,7 +81,7 @@ image = image
 ystart = int(image.shape[0]/2.0)
 ystop = int(image.shape[0] - 32)
 scale = 1.5
-X_scaler = scaled featues
+X_scaler = scaled features
 svc = trained classifier
 orient = 9
 pix_per_cell = 8
@@ -104,8 +104,8 @@ The implemented sliding window search method `find_cars`, generally performs wel
 
 **Video Implementation**
 
-In  code cell 23, I implemented a pipeline `process_image` function which takes in an image as a parameter and ouputs an image with bounding boxes highlighting detected vehicles.
-Below is a link to a video with each of its frame passed throught the pipeline:
+In  code cell 23, I implemented a pipeline `process_image` function which takes in an image as a parameter and outputs an image with bounding boxes highlighting detected vehicles.
+Below is a link to a video with each of its frame passed through the pipeline:
 
 ![alt text][image5]
 
@@ -113,7 +113,7 @@ Here's a [link to the processed video][video]
 
 **Discussion**
 
-There were some challenges encountered while implementing the pipeline. Vehicles were not detected all the time and there where several false positives. To improve the performance of the pipeline, I averaged every five frames of the video and set a threshould (using `apply_threshold` function) to remove regions with low heat intensity.This outputs a more consistent bounding box for detected vehicles.To remove false positives, I excluded bounding boxes with width or height less than 50m. 
+There were some challenges encountered while implementing the pipeline. Vehicles were not detected all the time and there where several false positives. To improve the performance of the pipeline, I averaged every five frames of the video and set a threshold (using `apply_threshold` function) to remove regions with low heat intensity.This outputs a more consistent bounding box for detected vehicles.To remove false positives, I excluded bounding boxes with width or height less than 50m. 
 
 The pipeline performed generally well in detecting vehicles but the trained classifier sometimes identifies dark spots as vehicles thus creating false positives. To tackle this problem, I would train a better classifier either by improving the quality of the dataset , get more dataset , use an ensemble of classifiers or explore additional colorspaces.
 
