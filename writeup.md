@@ -6,9 +6,9 @@
 The goals / steps of this project are the following:
 
 * Perform a Histogram of Oriented Gradients (HOG) feature extraction on a labeled training set of images 
-* Apply a color transform and append binned color features, as well as histograms of color, to your HOG feature vector. 
+* Apply a color transform and append binned color features, as well as histograms of color, to the HOG feature vector. 
 * Train a classifier - Linear SVM classifier
-* Implement a sliding-window technique and use your trained classifier to search for vehicles in images.
+* Implement a sliding-window technique and use the trained classifier to search for vehicles in images.
 * Run pipeline on a video stream and create a heat map of recurring detections frame by frame to reject outliers and follow detected vehicles.
 
 
