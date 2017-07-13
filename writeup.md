@@ -66,8 +66,8 @@ In code cell 19, I trained a SVM classifier with the following parameters C=10.0
 ```
 Using: 9 orientations 8 pixels per cell and 2 cells per block
 Feature vector length: 8460
-147.62 Seconds to train SVC...
-Test Accuracy of SVC =  0.9924
+138.15 Seconds to train SVC...
+Test Accuracy of SVC =  0.9879
 ```
 
 **Sliding Window Search**
@@ -99,7 +99,7 @@ In code cell 21, I also implemented a `add_heat` function to generate a heat map
 ![alt text][image4e]
 ![alt text][image4f]
 
-The implemented sliding window search method `find_cars`, generally performs well in detecting vehicles images. Though, it fails to detect vehicles that are further away in an image.
+The implemented sliding window search method `find_cars`, generally performs well in detecting vehicles in images. Though, it also classifies dark spots as vehicles.
 
 
 **Video Implementation**
