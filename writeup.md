@@ -48,7 +48,7 @@ I tried various combinations of parameters and selected the following combinatio
 
 **Color Histograms**
 
-From code cell 6 - 12, I explored various color histograms of colorspaces to determine which properly clusters car pixels.The Saruration plane in the SHSV color sapce does a good good.Here is a 3-D plot of an image show the clustering of car pixels in the saturation plane:
+From code cell 6 - 12, I explored various color histograms of colorspaces to determine which properly clusters car pixels.The Saturation plane in the HSV color space performs well in clustering car pixels.Here is a 3-D plot of an image showing color histograms in HSV colorspace:
 
 ![alt text][image3]
 
