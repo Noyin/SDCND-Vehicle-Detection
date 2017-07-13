@@ -26,11 +26,8 @@ The goals / steps of this project are the following:
 [image4d]: ./output_images/test4.jpg
 [image4e]: ./output_images/test5.jpg
 [image4f]: ./output_images/test6.jpg
-[image4]: ./output_images/sliding_window.jpg
-[image5]: ./output_images/bboxes_and_heat.png
-[image6]: ./output_images/labels_map.png
-[image7]: ./output_images/output_bboxes.png
-[video1]: ./project_video.mp4
+[image5]: ./car_detection2.gif "Video"
+[video1]: ./car_detection2.mp4
 
 The code for the following steps are contained in the IPython notebook located in "./CarND-Vehicle-Detection.ipynb". 
 
@@ -104,13 +101,16 @@ I also implemented a `add_heat` function to generate a heat map of detected vehi
 ![alt text][image4e]
 ![alt text][image4f]
 
-*Note the implemented sliding window search method `find_cars`, properly detects vehicles that appear closer in the image.
+The implemented sliding window search method `find_cars`, generally performs well in detecting vehicles images.Though, it fails to detect vehicles that a further away in an image.
 
 
 **Video Implementation**
 
 ####1. Provide a link to your final video output.  Your pipeline should perform reasonably well on the entire project video (somewhat wobbly or unstable bounding boxes are ok as long as you are identifying the vehicles most of the time with minimal false positives.)
-Here's a [link to my video result](./project_video.mp4)
+
+![alt text][image5]
+
+Here's a [link to the processed video][video]
 
 
 ####2. Describe how (and identify where in your code) you implemented some kind of filter for false positives and some method for combining overlapping bounding boxes.
