@@ -72,8 +72,6 @@ Test Accuracy of SVC =  0.9924
 
 **Sliding Window Search**
 
-####1. Describe how (and identify where in your code) you implemented a sliding window search.  How did you decide what scales to search and how much to overlap windows?
-
 In code cell 20, I implemented a sliding window method called `find_cars`.I explored various parameter combinations and found that the following parameter gave the best result :
 
 ```
@@ -92,7 +90,7 @@ spatial_size = (32,32)
 hist_bins = 32
 ```
 
-In code cell 21, I also implemented a `add_heat` function to generate a heat map of detected vehicles. The following shows bounding boxes on detected veicles  for test images using sliding window and their corresponding heatmaps:
+In code cell 21, I also implemented a `add_heat` function to generate a heat map of detected vehicles. The following shows bounding boxes on detected vehicles  for test images using sliding window and their corresponding heatmaps:
 
 ![alt text][image4a]
 ![alt text][image4b]
@@ -101,7 +99,7 @@ In code cell 21, I also implemented a `add_heat` function to generate a heat map
 ![alt text][image4e]
 ![alt text][image4f]
 
-The implemented sliding window search method `find_cars`, generally performs well in detecting vehicles images.Though, it fails to detect vehicles that a further away in an image.
+The implemented sliding window search method `find_cars`, generally performs well in detecting vehicles images. Though, it fails to detect vehicles that are further away in an image.
 
 
 **Video Implementation**
@@ -117,7 +115,7 @@ Here's a [link to the processed video][video]
 
 There were some challenges encountered while implementing the pipeline. Vehicles were not detected all the time and there where several false positives. To improve the performance of the pipeline, I averaged every five frames of the video and set a threshould (using `apply_threshold` function) to remove regions with low heat intensity.This outputs a more consistent bounding box for detected vehicles.To remove false positives, I excluded bounding boxes with width or height less than 50m. 
 
-The pipeline performed generally well in detecting vehicles but the trained classifier sometimes miss identifies dark spots as vehicles thus creating false positives. To tackle this problem, I would train a better classifier either by improving the quality of the dataset , get more dataset or use an ensemble of classifiers.
+The pipeline performed generally well in detecting vehicles but the trained classifier sometimes identifies dark spots as vehicles thus creating false positives. To tackle this problem, I would train a better classifier either by improving the quality of the dataset , get more dataset or use an ensemble of classifiers.
 
 
 
