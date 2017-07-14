@@ -27,7 +27,7 @@ The goals / steps of this project are the following:
 [image4e]: ./output_images/test5.jpg
 [image4f]: ./output_images/test6.jpg
 [image5]: ./car_detection2.gif "Video"
-[video1]: ./car_detection2.mp4
+[video]: ./car_detection2.mp4
 
 The code for the following steps are contained in the IPython notebook located in "./CarND-Vehicle-Detection.ipynb". 
 
